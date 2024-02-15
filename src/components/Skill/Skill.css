@@ -1,0 +1,46 @@
+#skill {
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skill > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  width: fit-content;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--color-primary);
+  width: fit-content;
+  padding: 15px;
+  border-radius: 15px;
+  width: 300px;
+}
+
+.skill-card > .icon {
+  font-size: 45px;
+  margin: 0px 15px;
+  margin-bottom: -5px;
+}
+
+.skill-card > img {
+  width: 45px;
+  margin: 0px 15px;
+  margin-bottom: -5px;
+  color: white;
+}
+
+.skill-card > div > h2 {
+  font-size: 21px;
+}
+
+.skill-card > div > p {
+  font-size: 11px;
+  margin-top: -3px;
+  padding-right: 10px;
+}
