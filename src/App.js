@@ -5,7 +5,6 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Skill from "./components/Skill/Skill";
 import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
 import { useRef, useState } from "react";
 
 function App() {
@@ -55,11 +54,12 @@ function App() {
     >
       <Navbar />
       <Home />
+      <Projects />
       <About />
       <Skill />
-      <Projects />
-      <Contact />
+
       <Footer />
+      <div className="layer"></div>
     </div>
   );
 }

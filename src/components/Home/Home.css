@@ -1,50 +1,99 @@
 #home {
-  padding: 7rem 0;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.myPic {
-  margin-left: 50px;
-  /* background-color: white; */
-  background-color: var(--color-bg);
-  border: 5px solid var(--color-primary);
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-/* ------- CTA-------- */
-.cta {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: flex-start;
-  gap: 1.2rem;
-}
-
-/*-----------Socials---------- */
-.header-socials {
+  margin-left: 70px;
+  min-width: calc(100vw - 70px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  justify-content: space-between;
+  padding: 20px 30px;
+  position: relative;
+}
+
+/* ---------Home Top ------------- */
+.home-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.home-top > div {
+  width: 400px;
+  text-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.home-top > div:before,
+.home-top > div:after {
+  content: "";
   position: absolute;
+  width: 30px;
+  height: 100%;
+}
+.home-top > div:before {
   left: 0;
-  bottom: -10rem;
+  background: linear-gradient(90deg, var(--color-bg), rgba(255, 255, 255, 0));
+}
+.home-top > div:after {
+  right: 0;
+  background: linear-gradient(-90deg, var(--color-bg), rgba(255, 255, 255, 0));
+}
+.home-top > div > p {
+  position: relative;
+  width: fit-content;
+  animation: transformX 10s infinite linear;
+}
+.home-top > div span {
+  margin-left: 30px;
+}
+
+@keyframes transformX {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-34.18%);
+  }
+  100% {
+    transform: translateX(-68.36%);
+  }
+}
+
+/* ---------Details--------- */
+.details > p {
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.details > h1 {
+  width: 600px;
+  text-align: center;
+  line-height: 120px;
+  letter-spacing: 2px;
+  font-size: 96px;
+  text-transform: uppercase;
+  margin: 10px 0px;
+  letter-spacing: 10px;
+}
+.details > h1:nth-child(2) {
+  border-top: 2px solid white;
+}
+.details > h1:nth-child(3) {
+  border-bottom: 2px solid white;
+}
+
+/* ------- CTA (Home Bottom)-------- */
+.cta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Scroll Down  */
 .scroll-down {
   position: absolute;
-  right: -3.8rem;
-  bottom: -6rem;
-  transform: rotate(90deg);
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 0.9rem;
   font-weight: 500;
   word-spacing: 12px;
